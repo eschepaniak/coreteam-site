@@ -33,8 +33,8 @@
       <div class="hero-grid">
         <div class="hero-content reveal">
           <p class="eyebrow">Tecnologia • Inovação • Resultado</p>
-          <h2>O Core Tecnológico que sustenta e evolui negócios.</h2>
-          <p class="hero-text">Unimos hardware, software e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
+          <h1>O Core Tecnológico que sustenta e evolui negócios.</h1>
+          <p class="hero-text">Unimos hardware robusto, software inteligente e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contato">Fale com a CoreTeam</a>
             <a class="button secondary" href="#servicos">Conheça as soluções</a>
@@ -61,8 +61,8 @@
 
     <section class="section" id="servicos">
       <div class="section-heading reveal">
-        <!--<p class="eyebrow">Pilares</p>-->
-        <h2>Frentes para acelerar a sua operação.</h2>
+        <p class="eyebrow">Pilares</p>
+        <h2>Três frentes para acelerar a sua operação.</h2>
       </div>
       <div class="cards three-columns">
         <article class="service-card reveal">
@@ -85,7 +85,7 @@
 
     <section class="section split" id="finops">
       <div class="split-content reveal">
-        <!--<p class="eyebrow">Foco em resultados</p>-->
+        <p class="eyebrow">Foco em resultados</p>
         <h2>FinOps para otimizar investimentos sem frear a inovação.</h2>
         <p>Mapeamos consumo, identificamos desperdícios, priorizamos oportunidades de economia e conectamos decisões técnicas ao impacto financeiro.</p>
         <ul class="check-list">
@@ -96,8 +96,12 @@
       </div>
       <div class="metric-panel reveal delay-1">
         <div class="metric-card large">
-          <span class="metric-number">30% +</span>
+          <span class="metric-number">40%</span>
           <span class="metric-label">Potencial de otimização em ambientes sem governança</span>
+        </div>
+        <div class="mini-metrics">
+          <div><strong>30%</strong><span>Software</span></div>
+          <div><strong>30%</strong><span>Hardware</span></div>
         </div>
       </div>
     </section>
@@ -136,38 +140,53 @@
         <div class="contact-copy">
           <img src="assets/logo-wide.png" alt="CoreTeam" />
           <p class="eyebrow">Contato</p>
-          <h3>Pronto para evoluir o core tecnológico da sua empresa?</h3>
-          <p>Envie uma mensagem para a CoreTeam. Conte-nos como podemos te ajudar com a sua principal dor com TI hoje.</p>
+          <h2>Pronto para evoluir o core tecnológico da sua empresa?</h2>
+          <p>Envie uma mensagem para a CoreTeam. O formulário será enviado diretamente pelo Web3Forms.</p>
           <div class="contact-actions">
             <a class="button secondary" href="mailto:contato@coreteam.com.br">contato@coreteam.com.br</a>
           </div>
         </div>
 
-        <form class="contact-form" action="https://formsubmit.co/contato@coreteam.com.br" method="POST">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
+          <input type="hidden" name="access_key" value="390bdbfa-5f77-43d5-b408-4cde1fa2069f" />
+          <input type="hidden" name="subject" value="Novo contato pelo site CoreTeam" />
+          <input type="hidden" name="from_name" value="Site CoreTeam" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
+
           <div class="form-row">
             <label for="name">Nome</label>
-            <input id="name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required />
-            <input type="hidden" name="_subject" value="Novo contato pelo site CoreTeam" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
+            <input id="name" name="name" type="text" placeholder="Seu nome" required />
           </div>
 
           <div class="form-row">
             <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required />
+            <input id="email" name="email" type="email" placeholder="seu@email.com" required />
           </div>
 
           <div class="form-row">
             <label for="company">Empresa</label>
-            <input id="company" name="company" type="text" placeholder="Nome da empresa" autocomplete="organization" />
+            <input id="company" name="company" type="text" placeholder="Nome da empresa" />
+          </div>
+
+          <div class="form-row">
+            <label for="interest">Interesse</label>
+            <select id="interest" name="interest" required>
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option>Hardware</option>
+              <option>Software</option>
+              <option>FinOps</option>
+              <option>Consultoria completa</option>
+            </select>
           </div>
 
           <div class="form-row full">
-            <label for="message">Conte-nos como podemos te ajudar</label>
+            <label for="message">Mensagem</label>
             <textarea id="message" name="message" rows="5" placeholder="Conte brevemente o que você precisa" required></textarea>
           </div>
 
           <button class="button primary" type="submit">Enviar mensagem</button>
+          <p class="form-note">As mensagens serão enviadas com segurança via Web3Forms.</p>
+          <div class="toast" data-form-toast role="status" aria-live="polite">Mensagem enviada com sucesso. Em breve retornaremos o contato.</div>
         </form>
       </div>
     </section>
