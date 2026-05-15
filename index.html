@@ -33,8 +33,8 @@
       <div class="hero-grid">
         <div class="hero-content reveal">
           <p class="eyebrow">Tecnologia • Inovação • Resultado</p>
-          <h1>O Core Tecnológico que sustenta e evolui negócios.</h1>
-          <p class="hero-text">Unimos hardware, software inteligente e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
+          <h2>O Core Tecnológico que sustenta e evolui negócios.</h2>
+          <p class="hero-text">Unimos hardware, software e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contato">Fale com a CoreTeam</a>
             <a class="button secondary" href="#servicos">Conheça as soluções</a>
@@ -61,7 +61,7 @@
 
     <section class="section" id="servicos">
       <div class="section-heading reveal">
-        <p class="eyebrow">Pilares</p>
+        <!--<p class="eyebrow">Pilares</p>-->
         <h2>Frentes para acelerar a sua operação.</h2>
       </div>
       <div class="cards three-columns">
@@ -78,26 +78,26 @@
         <article class="service-card reveal delay-2">
           <div class="icon-box green">$</div>
           <h3>FinOps</h3>
-          <p>Consultoria estratégica para redução de custos, governança e visibilidade financeira em tecnologia, com principal foco em Gestão de Licenças Microsoft 365.</p>
+          <p>Consultoria estratégica para redução de custos, governança e visibilidade financeira em tecnologia.</p>
         </article>
       </div>
     </section>
 
     <section class="section split" id="finops">
       <div class="split-content reveal">
-        <p class="eyebrow">Foco em resultados</p>
+        <!--<p class="eyebrow">Foco em resultados</p>-->
         <h2>FinOps para otimizar investimentos sem frear a inovação.</h2>
         <p>Mapeamos consumo, identificamos desperdícios, priorizamos oportunidades de economia e conectamos decisões técnicas ao impacto financeiro.</p>
         <ul class="check-list">
           <li>Otimização financeira contínua</li>
           <li>Inovação de software com controle de ROI</li>
+          <li>Robusteza de hardware com previsibilidade</li>
         </ul>
       </div>
       <div class="metric-panel reveal delay-1">
         <div class="metric-card large">
-          <span class="metric-number">40%</span>
+          <span class="metric-number">30% +</span>
           <span class="metric-label">Potencial de otimização em ambientes sem governança</span>
-          <div><strong>30%</strong><span>Software</span></div>
         </div>
       </div>
     </section>
@@ -136,17 +136,20 @@
         <div class="contact-copy">
           <img src="assets/logo-wide.png" alt="CoreTeam" />
           <p class="eyebrow">Contato</p>
-          <h2>Pronto para evoluir o core tecnológico da sua empresa?</h2>
-          <p>Envie uma mensagem para a CoreTeam. O formulário abre seu aplicativo de e-mail com as informações preenchidas para envio.</p>
+          <h3>Pronto para evoluir o core tecnológico da sua empresa?</h3>
+          <p>Envie uma mensagem para a CoreTeam. Conte-nos como podemos te ajudar com a sua principal dor com TI hoje.</p>
           <div class="contact-actions">
             <a class="button secondary" href="mailto:contato@coreteam.com.br">contato@coreteam.com.br</a>
           </div>
         </div>
 
-        <form class="contact-form" data-contact-form>
+        <form class="contact-form" action="https://formsubmit.co/contato@coreteam.com.br" method="POST">
           <div class="form-row">
             <label for="name">Nome</label>
             <input id="name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required />
+            <input type="hidden" name="_subject" value="Novo contato pelo site CoreTeam" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
           </div>
 
           <div class="form-row">
@@ -160,12 +163,11 @@
           </div>
 
           <div class="form-row full">
-            <label for="message">Conte-nos qual a sua dor em tecnologia hoje</label>
+            <label for="message">Conte-nos como podemos te ajudar</label>
             <textarea id="message" name="message" rows="5" placeholder="Conte brevemente o que você precisa" required></textarea>
           </div>
 
           <button class="button primary" type="submit">Enviar mensagem</button>
-          <!-- <p class="form-note">Destino: contato@coreteam.com.br</p> -->
         </form>
       </div>
     </section>

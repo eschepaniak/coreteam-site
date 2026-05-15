@@ -31,26 +31,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.18 });
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-
-
-const contactForm = document.querySelector('[data-contact-form]');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const data = new FormData(contactForm);
-    const subject = `Contato pelo site - ${data.get('name') || 'CoreTeam'}`;
-    const body = [
-      `Nome: ${data.get('name') || ''}`,
-      `E-mail: ${data.get('email') || ''}`,
-      `Empresa: ${data.get('company') || ''}`,
-      `Interesse: ${data.get('interest') || ''}`,
-      '',
-      'Mensagem:',
-      data.get('message') || '',
-    ].join('\n');
-
-    window.location.href = `mailto:contato@coreteam.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
-}

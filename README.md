@@ -23,3 +23,8 @@ Site institucional estático criado para publicação no GitHub Pages.
 - Altere textos e seções em `index.html`.
 - Ajuste cores globais no bloco `:root` do `styles.css`.
 - Troque e-mails/domínio na seção `contato` do `index.html`.
+
+
+## Formulário de contato
+
+O formulário usa FormSubmit para encaminhar mensagens para contato@coreteam.com.br. No primeiro envio, será necessário confirmar o endereço de destino pelo e-mail recebido do FormSubmit.
