@@ -31,3 +31,31 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.18 });
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+
+const contactForm = document.querySelector('[data-contact-form]');
+const formStatus = document.querySelector('[data-form-status]');
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  formStatus.textContent = 'Enviando mensagem...';
+
+  try {
+    const data = new FormData(contactForm);
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: data
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Falha no envio');
+    }
+
+    contactForm.reset();
+    formStatus.textContent = 'Mensagem enviada com sucesso. Em breve retornaremos o contato.';
+  } catch (error) {
+    formStatus.textContent = 'Não foi possível enviar a mensagem agora. Tente novamente ou envie um e-mail para contato@coreteam.com.br.';
+  }
+});

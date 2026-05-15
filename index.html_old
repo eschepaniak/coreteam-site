@@ -34,7 +34,7 @@
         <div class="hero-content reveal">
           <p class="eyebrow">Tecnologia • Inovação • Resultado</p>
           <h2>O Core Tecnológico que sustenta e evolui negócios.</h2>
-          <p class="hero-text">Unimos hardware robusto, software inteligente e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
+          <p class="hero-text">Unimos hardware, software e FinOps para transformar tecnologia em eficiência, segurança e crescimento sustentável.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contato">Fale com a CoreTeam</a>
             <a class="button secondary" href="#servicos">Conheça as soluções</a>
@@ -104,7 +104,7 @@
 
     <section class="section" id="metodo">
       <div class="section-heading reveal">
-        <!--<p class="eyebrow">Método CoreTeam</p>-->
+        <p class="eyebrow">Método CoreTeam</p>
         <h2>Da avaliação à evolução contínua.</h2>
       </div>
       <div class="timeline">
@@ -135,7 +135,7 @@
       <div class="cta-card contact-card reveal">
         <div class="contact-copy">
           <img src="assets/logo-wide.png" alt="CoreTeam" />
-          <!--<p class="eyebrow">Contato</p>-->
+          <p class="eyebrow">Contato</p>
           <h3>Pronto para evoluir o core tecnológico da sua empresa?</h3>
           <p>Envie uma mensagem para a CoreTeam. Conte-nos como podemos te ajudar com a sua principal dor com TI hoje.</p>
           <div class="contact-actions">
@@ -143,25 +143,23 @@
           </div>
         </div>
 
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form>
-          <input type="hidden" name="access_key" value="390bdbfa-5f77-43d5-b408-4cde1fa2069f" />
-          <input type="hidden" name="subject" value="Novo contato pelo site CoreTeam" />
-          <input type="hidden" name="from_name" value="Site CoreTeam" />
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
-
+        <form class="contact-form" action="https://formsubmit.co/contato@coreteam.com.br" method="POST">
           <div class="form-row">
             <label for="name">Nome</label>
-            <input id="name" name="name" type="text" placeholder="Seu nome" required />
+            <input id="name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required />
+            <input type="hidden" name="_subject" value="Novo contato pelo site CoreTeam" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
           </div>
 
           <div class="form-row">
             <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+            <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required />
           </div>
 
           <div class="form-row">
             <label for="company">Empresa</label>
-            <input id="company" name="company" type="text" placeholder="Nome da empresa" />
+            <input id="company" name="company" type="text" placeholder="Nome da empresa" autocomplete="organization" />
           </div>
 
           <div class="form-row full">

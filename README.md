@@ -27,4 +27,4 @@ Site institucional estático criado para publicação no GitHub Pages.
 
 ## Formulário de contato
 
-O formulário usa FormSubmit para encaminhar mensagens para contato@coreteam.com.br. No primeiro envio, será necessário confirmar o endereço de destino pelo e-mail recebido do FormSubmit.
+O formulário usa Web3Forms para encaminhar mensagens enviadas pelo site. O endpoint configurado é `https://api.web3forms.com/submit` e a chave de acesso já foi adicionada ao `index.html`.
