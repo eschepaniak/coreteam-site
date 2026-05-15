@@ -58,4 +58,7 @@ contactForm?.addEventListener('submit', async (event) => {
   } catch (error) {
     formStatus.textContent = 'Não foi possível enviar a mensagem agora. Tente novamente ou envie um e-mail para contato@coreteam.com.br.';
   }
+  setTimeout(() => {
+  formToast.classList.remove("show");
+}, 3000);
 });
