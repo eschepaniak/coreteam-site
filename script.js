@@ -93,25 +93,36 @@ contactForm?.addEventListener('submit', async (event) => {
   }
 
   try {
-    const data = new FormData(contactForm);
+    // Coleta campos do formulário
+    const formData = new FormData(contactForm);
+    const payload = Object.fromEntries(formData.entries());
+
     const response = await fetch(contactForm.action, {
       method: 'POST',
-      body: data,
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload),
     });
 
-    const result = await response.json();
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw new Error('Resposta inesperada do servidor.');
+    }
 
-    if (!response.ok || !result.success) {
-      throw new Error(result.message || 'Falha no envio');
+    console.info('[CoreTeam form] status:', response.status, '| result:', result);
+
+    // Formspree retorna { ok: true } no sucesso
+    if (!response.ok || result.ok === false) {
+      const msg = result?.errors?.[0]?.message || result?.error || `Erro ${response.status}`;
+      throw new Error(msg);
     }
 
     contactForm.reset();
     showToast('Mensagem enviada com sucesso. Em breve retornaremos o contato.');
   } catch (error) {
-    showToast(
-      'Não foi possível enviar agora. Tente novamente ou envie um e-mail para contato@coreteam.com.br.',
-      true
-    );
+    console.error('[CoreTeam form] Falha:', error.message);
+    showToast(`Não foi possível enviar: ${error.message}`, true);
   } finally {
     if (submitButton) {
       submitButton.disabled = false;
